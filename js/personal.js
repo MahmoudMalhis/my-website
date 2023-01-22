@@ -7,7 +7,7 @@ link.forEach((link) => {
         e.classList.remove("active");
       });
     e.target.classList.add("active");
-    document.querySelector("nav .sidebar").classList.remove("visible");
+    e.document.querySelector("nav .sidebar").classList.remove("visible");
   });
 });
 
