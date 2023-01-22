@@ -76,5 +76,5 @@ image.addEventListener("click", function () {
 
 document.querySelector("nav .icon i").addEventListener("click", function () {
   console.log("aa");
-  document.querySelector("nav .sidebar").classList.add("visible");
+  document.querySelector("nav .sidebar").classList.toggle("visible");
 });
