@@ -1,4 +1,5 @@
 let link = document.querySelectorAll("nav .sidebar .link li a");
+let icon = document.querySelector("nav .sidebar");
 link.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.target.parentElement.parentElement
@@ -7,7 +8,8 @@ link.forEach((link) => {
         e.classList.remove("active");
       });
     e.target.classList.add("active");
-    querySelector("nav .sidebar").classList.remove("visible");
+    icon.classList.remove("visible");
+
   });
 });
 
