@@ -7,6 +7,7 @@ link.forEach((link) => {
         e.classList.remove("active");
       });
     e.target.classList.add("active");
+    document.querySelector("nav .sidebar").classList.remove("visible");
   });
 });
 
@@ -73,5 +74,5 @@ image.addEventListener("click", function () {
 
 document.querySelector("nav .icon i").addEventListener("click", function () {
   console.log("aa");
-  document.querySelector("nav .sidebar").classList.toggle("visible");
+  document.querySelector("nav .sidebar").classList.add("visible");
 });
