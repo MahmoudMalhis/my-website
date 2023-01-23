@@ -1,5 +1,6 @@
 let link = document.querySelectorAll("nav .sidebar .link li a");
 let icon = document.querySelector("nav .sidebar");
+
 link.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.target.parentElement.parentElement
@@ -9,7 +10,6 @@ link.forEach((link) => {
       });
     e.target.classList.add("active");
     icon.classList.remove("visible");
-
   });
 });
 
@@ -55,15 +55,10 @@ window.addEventListener("load", function () {
     });
 });
 
-let localAlt = localStorage.getItem("alt-img");
 let image = document.querySelector("nav .image img");
 let span = document.querySelector("nav .image span");
-console.log(image.alt);
-if (localAlt) {
-  image.setAttribute("src", localAlt);
-}
+
 image.addEventListener("click", function () {
-  localStorage.setItem("localAlt", image.src);
   if (image.alt === "light") {
     image.src = "image/dark.png";
     image.alt = "dark";
@@ -75,6 +70,38 @@ image.addEventListener("click", function () {
 });
 
 document.querySelector("nav .icon i").addEventListener("click", function () {
-  console.log("aa");
   document.querySelector("nav .sidebar").classList.toggle("visible");
 });
+
+let img = document
+  .querySelectorAll("#portfolio .image img")
+  .forEach((image) => {
+    image.addEventListener("click", function () {
+      let overlay = document.createElement("div");
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      let a = document.createElement("a");
+      let git = document.createElement("a");
+      let p = document.createElement("p");
+      let icon = document.createElement("i");
+      icon.className = "fa-sharp fa-solid fa-xmark";
+      overlay.className = "overlay";
+      div.className = "new-box";
+      img.className = "new-img";
+      a.className = "new-link";
+      git.className = "git";
+      img.src = image.src;
+      p.innerHTML = document.querySelector("#portfolio .image div p").innerHTML;
+      icon.addEventListener("click", () => {
+        document.body.removeChild(div);
+        document.body.removeChild(overlay);
+      });
+      div.appendChild(icon);
+      div.appendChild(img);
+      div.appendChild(p);
+      div.appendChild(a);
+      div.appendChild(git);
+      document.body.appendChild(div);
+      document.body.appendChild(overlay);
+    });
+  });
