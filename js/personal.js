@@ -84,6 +84,13 @@ let img = document
       let git = document.createElement("a");
       let p = document.createElement("p");
       let icon = document.createElement("i");
+      let left = document.createElement("i");
+      let right = document.createElement("i");
+      let buttonBox = document.createElement("div");
+
+      buttonBox.className = "buttonBox";
+      right.className = "fa-regular fa-chevron-right right";
+      left.className = "fa-regular fa-chevron-left left";
       icon.className = "fa-sharp fa-solid fa-xmark";
       overlay.className = "overlay";
       div.className = "new-box";
@@ -91,16 +98,29 @@ let img = document
       a.className = "new-link";
       git.className = "git";
       img.src = image.src;
-      p.innerHTML = document.querySelector("#portfolio .image div p").innerHTML;
+      a.href = image.dataset.link;
+      git.href = image.dataset.git;
+      a.target = "_blank";
+      git.target = "_blank";
+      a.innerHTML = "link";
+      git.innerHTML = "Source code";
+      p.innerHTML = document.querySelector(".inner").innerText;
       icon.addEventListener("click", () => {
         document.body.removeChild(div);
         document.body.removeChild(overlay);
       });
+      let imageArray = document.querySelectorAll("#portfolio .image div div");
+      let counter = 0;
+      counter++;
+
+      div.appendChild(right);
+      div.appendChild(left);
       div.appendChild(icon);
       div.appendChild(img);
       div.appendChild(p);
-      div.appendChild(a);
-      div.appendChild(git);
+      buttonBox.appendChild(a);
+      buttonBox.appendChild(git);
+      div.appendChild(buttonBox);
       document.body.appendChild(div);
       document.body.appendChild(overlay);
     });

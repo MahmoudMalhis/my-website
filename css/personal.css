@@ -25,6 +25,9 @@ ul {
 a {
   text-decoration: none;
 }
+i {
+  font-weight: 900;
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -211,6 +214,7 @@ section .home .box {
 }
 
 section .home .box .content span {
+  font-family: "Clicker Script", cursive;
   color: var(--main-color);
 }
 
@@ -604,21 +608,60 @@ section .contact {
   padding: 10px;
   background-color: var(--background);
   border: 2px solid #333;
+  text-align: center;
 }
 
 .new-box .new-img {
   width: 500px;
 }
-.new-box i {
+.new-box i.fa-xmark {
   position: relative;
   top: -5px;
   right: -5px;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  width: fit-content;
   cursor: pointer;
 }
 
+.new-box .right,
+.new-box .left {
+  font-weight: 900;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+.new-box .right {
+  right: -40px;
+}
+.new-box .left {
+  left: -40px;
+}
 .new-box p {
   text-align: center;
   color: var(--seconde-color);
   margin: 10px;
-  font: bold;
+  font-weight: bold;
+}
+
+.new-box .buttonBox {
+  margin: 30px 0 15px;
+}
+.new-box a {
+  padding: 10px 20px;
+  margin: 15px 20px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .new-box .new-img {
+    width: 300px;
+  }
 }

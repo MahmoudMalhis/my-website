@@ -7,261 +7,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/normalaize.css">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
-    <title>Landing-Page with color switcher</title>
+    <link rel="stylesheet" href="css/personal.css">
+    <title>Mahmoud Malhis</title>
 </head>
 
 <body>
-    <div class="settings-box">
-        <div class="setting-icon">
-            <i class="fa fa-gear"></i>
+    <nav>
+        <div class="image">
+            <img src="image/light.png" alt="light"><span>light</span>
         </div>
-        <div class="settings-container">
-            <div class="color">
-                <h4>Colors</h4>
-                <ul class="colors-list">
-                    <li data-color="#845ec8"></li>
-                    <li data-color="#D65DB1"></li>
-                    <li data-color="#FF6F91"></li>
-                    <li data-color="#FF9671"></li>
-                    <li data-color="#FFC75F"></li>
-                </ul>
-            </div>
-            <div class="random">
-                <h4>Random Background</h4>
-                <span class="yes active" data-background="yes">Yes</span>
-                <span class="no" data-background="no">NO</span>
-            </div>
-            <button class="reset">Reset Options</button>
+        <div class="icon">
+            <i class="fa-solid fa-bars"></i>
         </div>
-    </div>
-    <header class="landing-page" id="#home">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="header-area">
-                <div class="logo"><a> Mahmoud</a></div>
-                <i class="fa-regular fa-bars"></i>
-                <ul class="link">
-                    <li><a href="#about" class="aboutnav">About</a></li>
-                    <li><a href="#skills" class="skillsnav">Skills</a></li>
-                    <li><a href="#gallery" class="gallerynav">Gallery</a></li>
-                    <li><a href="#timeline" class="timelinenav">Timeline</a></li>
-                    <li><a href="#features" class="featuresnav">Features</a></li>
-                    <li><a href="#testimonials" class="testimonialsnav">Testimonials</a></li>
-                    <li><a href="#contact" class="contactnav">Contact</a></li>
-                </ul>
-            </div>
+        <div class="sidebar">
+            <div class="logo">MAHMOUD</div>
+            <ul class="link">
+                <li><a data-id="home" class="active" href="#home"><i class="fa-regular fa-house"></i>Home</a></li>
+                <li><a data-id="about" href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a data-id="portfolio" href="#portfolio"><i class="fa-regular fa-briefcase"></i>Portfolio</a></li>
+                <li><a data-id="contact" href="#contact"><i class="fa-solid fa-comments"></i></i>Contact</a></li>
+            </ul>
         </div>
-        <div class="introduction-text">
-            <h1>We are <span>Creative</span> Agency</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, veniam. Doloribus voluptatibus ea
-                ipsum vitae!</p>
-        </div>
+    </nav>
+    <section id="home" class="hidden">
+        <div class="main-section home">
+            <div class="container">
+                <div class="box">
+                    <div class="content">
+                        <h1>Hello, my name is <span>Mahmoud Malhis</span></h1>
+                        <p>I'm a <span>FrontEnd Developer</span> </p>
 
-    </header>
-    <section class="about" id="about">
-        <div class="container">
-            <div class="content">
+                        <div data-id="about" class="button">More About Me</div>
+                    </div>
+                    <div class="image">
+                        <img src="image/tinywow_WhatsApp Image 2023-01-20 at 14.11.07_12004034.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class=" main-section about">
+            <div class="container">
+                <h2>About Me</h2>
                 <div class="text">
-                    <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem eaque distinctio saepe,
-                        modi
-                        sint ad, suscipit eum nesciunt pariatur corrupti consequuntur provident, iste sit culpa
-                        accusamus?
-                        Maiores, reprehenderit nisi.</p>
+                    <p>I'm Mahmoud Malhis <span>FrontEnd developer</span></p>
+                    <p>I am Mahmoud Malhis, a graduate of Al-Quds Open University, majoring in
+                        Computer Information Systems (CIS).
+                        I am currently working as a Front-End Developer</p>
                 </div>
+                <div class="box">
+                    <div class="cv">
+                        <div class="right">
+                            <p>Age:<span> 28</span></p>
+                            <p>Degree:<span> CIS</span></p>
+                            <p>City:<span> Nablus</span></p>
+                        </div>
+                        <div class="left">
+                            <p>Birthday:<span> 16-06-1994</span></p>
+                            <p>Phone:<span> +970597629889</span></p>
+                            <p>E-mail:<span> <a href="mailto:malhismahmoud@gmail.com">malhismahmoud@gmail.com</a></span>
+                            </p>
+                            <span class="button"><a
+                                    href="https://drive.google.com/file/d/1_mDivatuS8cmTlp0z9mztl5ynU8lS7ei/view"
+                                    target="_blank">Download CV</a> </span>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <div class="skill">
+                            <p>HTML</p>
+                            <div class="data"><span data-progress="95%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <p>CSS</p>
+                            <div class="data"><span data-progress="90%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <p>JS</p>
+                            <div class="data"><span data-progress="85%"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="main-section portfolio ">
+            <div class="container">
+                <h2>Portfolio</h2>
+                <p>My Last Projects:</p>
                 <div class="image">
-                    <img src="image/about-us.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2>Our Skills</h2>
-            <div class="box">
-                <div class="name">HTML</div>
-                <div class="data">
-                    <span data-progress="80%"></span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="name">CSS</div>
-                <div class="data">
-                    <span data-progress="70%"></span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="name">JavaScript</div>
-                <div class="data">
-                    <span data-progress="90%"></span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="name">Python</div>
-                <div class="data">
-                    <span data-progress="80%"></span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="name">PHP</div>
-                <div class="data">
-                    <span data-progress="90%"></span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="name">MySQL</div>
-                <div class="data">
-                    <span data-progress="70%"></span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2>My Gallery</h2>
-            <div class="image">
-                <img src="image/01.jpg" alt="Image One">
-                <img src="image/02.jpg" alt="Image">
-                <img src="image/03.jpg" alt="">
-                <img src="image/04.jpg" alt="Image">
-                <img src="image/05.jpg" alt="">
-                <img src="image/06.png" alt="Image">
-                <img src="image/07.jpg" alt="">
-                <img src="image/08.jpg" alt="">
-                <img src="image/09.jpg" alt="Image">
-                <img src="image/10.jpg" alt="">
-            </div>
-    </section>
-    <section class="timeline" id="timeline">
-        <div class="container">
-            <div class="timeline-content">
-                <div class="year">2018</div>
-                <div class="left">
-                    <div class="content">
-                        <h3>Testing Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quasi, quaerat non soluta
-                            repellat nostrum odit explicabo voluptate veniam rem est recusandae eveniet itaque ipsum
-                            velit aspernatur dolore excepturi nemo.</p>
+                    <p class="title">HTML & CSS</p>
+                    <div class="css">
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Dashboard.git"
+                                data-link="https://mahmoudmalhis.github.io/Dashboard/" src="image/Dashboard.png" alt="">
+                            <p class="inner">Dashboard</p>
+                        </div>
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Landing-Page-with-animated-sections.git"
+                                data-link="https://mahmoudmalhis.github.io/Landing-Page-with-animated-sections/"
+                                src="image/Template 3.png" alt="">
+                            <p class="inner">Landing-Page with animated sections</p>
+                        </div>
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Landing-Page.git"
+                                data-link="https://mahmoudmalhis.github.io/Landing-Page/" src="image/Template 2 .png"
+                                alt="">
+                            <p class="inner">Landing-Page</p>
+                        </div>
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Landing-Page-simple.git"
+                                data-link="https://mahmoudmalhis.github.io/Landing-Page-simple/"
+                                src="image/Template 1.png" alt="">
+                            <p class="inner">Landing-Page simple</p>
+                        </div>
+                    </div>
+                    <p class="title">Java Script</p>
+                    <div class="js">
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Landing-Page-with-color-switcher.git"
+                                data-link="https://mahmoudmalhis.github.io/Landing-Page-with-color-switcher/"
+                                src="image/Document .png" alt="">
+                            <p class="inner">Landing-Page with color switcher</p>
+                        </div>
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Clock.git"
+                                data-link="https://mahmoudmalhis.github.io/Clock/" src="image/Clock.png" alt="">
+                            <p class="inner">Clock</p>
+                        </div>
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Stop-Watch.git"
+                                data-link="https://mahmoudmalhis.github.io/Stop-Watch/" src="image/Stop Watch.png"
+                                alt="">
+                            <p class="inner">Stop Watch</p>
+                        </div>
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Black-Jack.git"
+                                data-link="https://mahmoudmalhis.github.io/Black-Jack/" src="image/Black Jack .png"
+                                alt="">
+                            <p class="inner">Black Jack</p>
+                        </div>
+                        <div>
+                            <img data-git="https://github.com/MahmoudMalhis/Subway-Passenger-Counter.git"
+                                data-link="https://mahmoudmalhis.github.io/Subway-Passenger-Counter/"
+                                src="image/Subway Passenger Counter.png" alt="">
+                            <p class="inner">Subway Passenger Counter</p>
+                        </div>
+
+
+
+
+
                     </div>
                 </div>
-                <div class="clearfix"></div>
-                <div class="right">
-                    <div class="content">
-                        <h3>Testing Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quasi, quaerat non soluta
-                            repellat nostrum odit explicabo voluptate veniam rem est recusandae eveniet itaque ipsum
-                            velit aspernatur dolore excepturi nemo.</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="year">2016</div>
-                <div class="left">
-                    <div class="content">
-                        <h3>Testing Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quasi, quaerat non soluta
-                            repellat nostrum odit explicabo voluptate veniam rem est recusandae eveniet itaque ipsum
-                            velit aspernatur dolore excepturi nemo.</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="left">
-                    <div class="content">
-                        <h3>Testing Heading</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quasi, quaerat non soluta
-                            repellat nostrum odit explicabo voluptate veniam rem est recusandae eveniet itaque ipsum
-                            velit aspernatur dolore excepturi nemo.</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
             </div>
         </div>
     </section>
-    <section class="features" id="features">
-        <div class="container">
-            <h2>Our Features</h2>
-            <div class="main-box">
+    <section id="contact">
+        <div class="main-section contact ">
+            <div class="container">
+                <h2>Contact Me</h2>
                 <div class="box">
-                    <img src="image/programming.svg" alt="">
-                    <h4>Development</h4>
-                    <p>We are professional marketeers, we will do anything you imagine in no time.</p>
-                </div>
-                <div class="box">
-                    <img src="image/advertising.svg" alt="">
-                    <h4>Marketing</h4>
-                    <p>We are professional marketeers, we will do anything you imagine in no time.</p>
-                </div>
-                <div class="box">
-                    <img src="image/hosting-icon.svg" alt="">
-                    <h4>Hosting</h4>
-                    <p>We are professional marketeers, we will do anything you imagine in no time.</p>
-                </div>
-                <div class="box">
-                    <img src="image/mobile-app.svg" alt="">
-                    <h4>Mobile Develope</h4>
-                    <p>We are professional marketeers, we will do anything you imagine in no time.</p>
-                </div>
-                <div class="box">
-                    <img src="image/graphic-design.svg" alt="">
-                    <h4>Cloud and Servers</h4>
-                    <p>We are professional marketeers, we will do anything you imagine in no time.</p>
-                </div>
-                <div class="box">
-                    <img src="image/web-design.svg" alt="">
-                    <h4>Seo</h4>
-                    <p>We are professional marketeers, we will do anything you imagine in no time.</p>
+                    <p>Have you any Question?</p>
+                    <div class="social-media">
+                        <div class="left">
+
+                            <div class="facebook social">
+                                <a href="https://www.facebook.com/mahmood.malhis" target="_blank"><i
+                                        class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+                            </div>
+                            <div class="twitter social">
+                                <a href="https://twitter.com/mahmoud_malhis" target="_blank"><i
+                                        class="fa-brands fa-twitter"></i></i><span>Twitter</span></a>
+                            </div>
+                            <div class="instagram social">
+                                <a href="https://www.instagram.com/mahmoud_malhis/" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                            </div>
+                        </div>
+                        <div class="right">
+
+                            <div class="linkedin social">
+                                <a href="https://www.linkedin.com/in/mahmoud-malhis-a3348a164" target="_blank"><i
+                                        class="fa-brands fa-linkedin"></i><span>Linkedin</span></a>
+                            </div>
+                            <div class="whatsapp social">
+                                <a href="https://wsend.co/970597629889" target="_blank"><i
+                                        class="fa-brands fa-whatsapp"></i><span>Whatsapp</span></a>
+                            </div>
+                            <div class="github social">
+                                <a href="https://github.com/MahmoudMalhis" target="_blank"><i
+                                        class="fa-brands fa-github"></i><span>Github</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2>Testimonials</h2>
-            <div class="main-box">
-                <div class="box">
-                    <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.
-                    </p>
-                    <h4>Ahmed Mosaad</h4>
-                    <p>CEO At Company</p>
-                </div>
-                <div class="box">
-                    <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.
-                    </p>
-                    <h4>Mohamed Ibrahim</h4>
-                    <p>CEO At Company</p>
-                </div>
-                <div class="box">
-                    <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.
-                    </p>
-                    <h4>Sherief Ashraf</h4>
-                    <p>CEO At Company</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <div class="overlay"></div>
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form action="">
-                <div class="left">
-                    <input type="text" placeholder="Your Name" name="username">
-                    <input type="text" placeholder="Your Phone" name="phone">
-                    <input type="email" placeholder="Your Email" name="email">
-                    <input type="text" placeholder="Subject" name="subject">
-                </div>
-                <div class="right">
-                    <textarea name="message" placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send">
-                </div>
-            </form>
-        </div>
-    </section>
-    <footer>
-        Created by Mahmoud Malhis
-    </footer>
-    <script src=" js/maine.js"></script>
+    <script src="js/personal.js"></script>
 </body>
 
 </html>
