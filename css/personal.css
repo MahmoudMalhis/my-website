@@ -213,8 +213,10 @@ section .home .box {
   align-items: center;
 }
 
-section .home .box .content span {
+section .home .box .content h1 span {
   font-family: "Clicker Script", cursive;
+}
+section .home .box .content span {
   color: var(--main-color);
 }
 
