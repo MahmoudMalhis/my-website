@@ -72,6 +72,11 @@ image.addEventListener("click", function () {
 document.querySelector("nav .icon i").addEventListener("click", function () {
   document.querySelector("nav .sidebar").classList.toggle("visible");
 });
+document.querySelectorAll("section").forEach((section) => {
+  section.addEventListener("click", () => {
+    document.querySelector("nav .sidebar").classList.remove("visible");
+  });
+});
 
 let img = document
   .querySelectorAll("#portfolio .image img")
@@ -105,7 +110,6 @@ let img = document
       git.innerHTML = "Source code";
       pra = image.nextElementSibling.innerHTML;
       p.innerHTML = pra;
-      console.log(pra);
       icon.addEventListener("click", () => {
         document.body.removeChild(div);
         document.body.removeChild(overlay);
