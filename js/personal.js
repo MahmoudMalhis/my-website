@@ -87,10 +87,9 @@ let img = document
       let left = document.createElement("i");
       let right = document.createElement("i");
       let buttonBox = document.createElement("div");
-
       buttonBox.className = "buttonBox";
-      right.className = "fa-regular fa-chevron-right right";
-      left.className = "fa-regular fa-chevron-left left";
+      right.className = "fa-regular fa-chevron-right right btn";
+      left.className = "fa-regular fa-chevron-left left btn";
       icon.className = "fa-sharp fa-solid fa-xmark";
       overlay.className = "overlay";
       div.className = "new-box";
@@ -104,15 +103,37 @@ let img = document
       git.target = "_blank";
       a.innerHTML = "link";
       git.innerHTML = "Source code";
-      p.innerHTML = document.querySelector(".inner").innerText;
+      pra = image.nextElementSibling.innerHTML;
+      p.innerHTML = pra;
+      console.log(pra);
       icon.addEventListener("click", () => {
         document.body.removeChild(div);
         document.body.removeChild(overlay);
       });
-      let imageArray = document.querySelectorAll("#portfolio .image div div");
       let counter = 0;
-      counter++;
-
+      let imageArray = document.querySelectorAll(
+        "#portfolio .image div div img"
+      );
+      left.addEventListener("click", () => {
+        counter--;
+        if (counter < 0) {
+          counter = imageArray.length - 1;
+        }
+        img.src = imageArray[counter].src;
+        git.href = imageArray[counter].dataset.git;
+        a.href = imageArray[counter].dataset.link;
+        p.innerHTML = imageArray[counter].nextElementSibling.innerHTML;
+      });
+      right.addEventListener("click", () => {
+        counter++;
+        if (counter > imageArray.length - 1) {
+          counter = 0;
+        }
+        img.src = imageArray[counter].src;
+        git.href = imageArray[counter].dataset.git;
+        a.href = imageArray[counter].dataset.link;
+        p.innerHTML = imageArray[counter].nextElementSibling.innerHTML;
+      });
       div.appendChild(right);
       div.appendChild(left);
       div.appendChild(icon);
