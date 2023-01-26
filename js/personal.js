@@ -57,9 +57,9 @@ window.addEventListener("load", function () {
 
 let image = document.querySelector("nav .image img");
 let span = document.querySelector("nav .image span");
+let localMode = localStorage.getItem("mode") === "true";
 
 window.onload = function () {
-  let localMode = localStorage.getItem("mode") === "true";
   changeMode(localMode);
 };
 image.addEventListener("click", function () {
@@ -74,9 +74,13 @@ image.addEventListener("click", function () {
     changeMode(isDark);
   }
 });
+var after = document.querySelectorAll("nav .sidebar .link li");
 
 function changeMode(isDark) {
   if (isDark) {
+    after.forEach((e) => {
+      e.style.setProperty("--background", "#222");
+    });
     image.src = "image/dark.png";
     image.alt = "dark";
     document.body.classList.add("dark");
@@ -95,6 +99,7 @@ function changeMode(isDark) {
     document.querySelectorAll("#portfolio .image .js").forEach((e) => {
       e.classList.add("sidebar-dark");
     });
+    // changeColor();
   } else {
     image.src = "image/light.png";
     image.alt = "light";
@@ -113,6 +118,9 @@ function changeMode(isDark) {
     });
     document.querySelectorAll("#portfolio .image .js").forEach((e) => {
       e.classList.remove("sidebar-dark");
+    });
+    after.forEach((e) => {
+      e.style.setProperty("--background", "#f1f5f9");
     });
   }
   span.innerHTML = image.alt;

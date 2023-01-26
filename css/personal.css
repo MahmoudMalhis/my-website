@@ -148,7 +148,7 @@ nav .sidebar .link li::before {
   transition: 0.3s;
 }
 nav .sidebar .link li::after {
-  content: attr(data-backgroundColor);
+  content: "";
   position: absolute;
   width: 100%;
   height: calc(100% - 7px);
