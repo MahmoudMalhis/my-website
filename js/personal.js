@@ -58,16 +58,65 @@ window.addEventListener("load", function () {
 let image = document.querySelector("nav .image img");
 let span = document.querySelector("nav .image span");
 
+window.onload = function () {
+  let localMode = localStorage.getItem("mode") === "true";
+  changeMode(localMode);
+};
 image.addEventListener("click", function () {
+  let isDark = false;
   if (image.alt === "light") {
+    isDark = true;
+    localStorage.setItem("mode", isDark);
+    changeMode(isDark);
+  } else {
+    isDark = false;
+    localStorage.setItem("mode", isDark);
+    changeMode(isDark);
+  }
+});
+
+function changeMode(isDark) {
+  if (isDark) {
     image.src = "image/dark.png";
     image.alt = "dark";
+    document.body.classList.add("dark");
+    document.querySelectorAll("nav .sidebar .link li a").forEach((a) => {
+      document.querySelector(".about .box").classList.add("sidebar-dark");
+      a.classList.add("a-dark");
+    });
+    document.querySelector(".sidebar").classList.add("sidebar-dark");
+    document.querySelector("nav .icon i").classList.add("i-dark");
+    document.querySelectorAll(".about .box .skills .skill").forEach((e) => {
+      e.classList.add("dark");
+    });
+    document.querySelectorAll("#portfolio .image .css").forEach((e) => {
+      e.classList.add("sidebar-dark");
+    });
+    document.querySelectorAll("#portfolio .image .js").forEach((e) => {
+      e.classList.add("sidebar-dark");
+    });
   } else {
     image.src = "image/light.png";
     image.alt = "light";
+    document.body.classList.remove("dark");
+    document.querySelector(".sidebar").classList.remove("sidebar-dark");
+    document.querySelectorAll("nav .sidebar .link li a").forEach((a) => {
+      a.classList.remove("a-dark");
+    });
+    document.querySelector(".about .box").classList.remove("sidebar-dark");
+    document.querySelector("nav .icon i").classList.remove("i-dark");
+    document.querySelectorAll(".about .box .skills .skill").forEach((e) => {
+      e.classList.remove("dark");
+    });
+    document.querySelectorAll("#portfolio .image .css").forEach((e) => {
+      e.classList.remove("sidebar-dark");
+    });
+    document.querySelectorAll("#portfolio .image .js").forEach((e) => {
+      e.classList.remove("sidebar-dark");
+    });
   }
   span.innerHTML = image.alt;
-});
+}
 
 document.querySelector("nav .icon i").addEventListener("click", function () {
   document.querySelector("nav .sidebar").classList.toggle("visible");
@@ -106,7 +155,7 @@ let img = document
       git.href = image.dataset.git;
       a.target = "_blank";
       git.target = "_blank";
-      a.innerHTML = "link";
+      a.innerHTML = "Demo";
       git.innerHTML = "Source code";
       pra = image.nextElementSibling.innerHTML;
       p.innerHTML = pra;
