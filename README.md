@@ -10,9 +10,7 @@ This websit is a Portfolio for my projects
 ## Features
 
 - Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- Fully responsive
 
 
 ## Feedback
