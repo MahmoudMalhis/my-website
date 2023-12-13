@@ -99,6 +99,12 @@ function changeMode(isDark) {
     document.querySelectorAll("#portfolio .image .js").forEach((e) => {
       e.classList.add("sidebar-dark");
     });
+    document.querySelectorAll("#portfolio .image .bootstrap").forEach((e) => {
+      e.classList.add("sidebar-dark");
+    });
+    document.querySelectorAll("#portfolio .image .react").forEach((e) => {
+      e.classList.add("sidebar-dark");
+    });
     // changeColor();
   } else {
     image.src = "image/light.png";
@@ -117,6 +123,12 @@ function changeMode(isDark) {
       e.classList.remove("sidebar-dark");
     });
     document.querySelectorAll("#portfolio .image .js").forEach((e) => {
+      e.classList.remove("sidebar-dark");
+    });
+    document.querySelectorAll("#portfolio .image .bootstrap").forEach((e) => {
+      e.classList.remove("sidebar-dark");
+    });
+    document.querySelectorAll("#portfolio .image .react").forEach((e) => {
       e.classList.remove("sidebar-dark");
     });
     after.forEach((e) => {
